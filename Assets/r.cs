@@ -11,6 +11,7 @@ public class r : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Transfere.Rotate new Vector3(15,30,45) * Time.deltaTime();
+        transform.Rotate(new Vector3(15,30,45) * Time.deltaTime);
     }
+
 }
