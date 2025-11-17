@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using TMpro;
+using TMPro;
 
 public class scr : MonoBehaviour
 {
@@ -14,14 +14,16 @@ public class scr : MonoBehaviour
 
     private int count;
 
-    public TextMeshPro countText;
+    public TextMeshProUGUI countText;
+
+    public GameObject winText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         count = 0;
-        set countText;
+        winText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -47,7 +49,7 @@ public class scr : MonoBehaviour
 
         void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Hit");
+
        if (other.gameObject.CompareTag("Pickup")) 
        {
            other.gameObject.SetActive(false);
@@ -55,9 +57,13 @@ public class scr : MonoBehaviour
            SetCountTest();
        }
 
-       void SetCountTest()(
-        countText.text = "Count:" +count.ToString();
-       )
+
     }
+    void SetCountTest(){
+        countText.text = "Count: " +count.ToString();
+        if(count >= 6){
+            winText.SetActive(true);
+        }
+       }
 
 }
