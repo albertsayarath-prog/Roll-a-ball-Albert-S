@@ -57,6 +57,12 @@ public class scr : MonoBehaviour
            SetCountTest();
        }
 
+       if (other.gameObject.CompareTag("Pickup2"))
+       {
+        other.gameObject.SetActive(false);
+        speed = speed + 20;
+       }
+
 
     }
     void SetCountTest(){

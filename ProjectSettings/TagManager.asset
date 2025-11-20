@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Pickup
   - Enemy
+  - Pickup2
+  - Pickup3
+  - killer
   layers:
   - Default
   - TransparentFX

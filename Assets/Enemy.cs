@@ -20,4 +20,12 @@ public class Enemy : MonoBehaviour
             navMeshAgent.SetDestination(player.position);
         }
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+       if (other.gameObject.CompareTag("Pickup3")) 
+       {
+           transform.position = new Vector3(0,0,0);
+       }
+    }
 }
