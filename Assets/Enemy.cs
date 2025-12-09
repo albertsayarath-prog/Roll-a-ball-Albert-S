@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
        if (other.gameObject.CompareTag("Pickup3")) 
        {
            transform.position = new Vector3(0,0,0);
+           other.gameObject.SetActive(false);
        }
     }
 }
